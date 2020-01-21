@@ -26,15 +26,11 @@ const App = () => {
     fetchAllPokemon();
   }, [ pokelist.length ]);
 
-  let list = pokelist.map(value => {
-    return <li>{value.name}</li>;
-  });
-
   return (
     <div className="App">
       <div className="dex-container">
         <DetailPage />
-        <ListPage list={list} />
+        <ListPage list={pokelist} />
       </div>
     </div>
   );
