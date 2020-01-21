@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import DetailPage from '../../components/detail/DetailPage';
+import ListPage from '../../components/list/ListPage';
 
 import axios from 'axios';
 
@@ -31,7 +33,8 @@ const App = () => {
   return (
     <div className="App">
       <div className="dex-container">
-        <ul>{list}</ul>
+        <DetailPage />
+        <ListPage list={list} />
       </div>
     </div>
   );

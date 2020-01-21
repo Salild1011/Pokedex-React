@@ -1,0 +1,11 @@
+.ListPage {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 30px;
+}
+
+.list-screen {
+  height: 100%;
+  overflow: scroll;
+  background-color: #FFF;
+}

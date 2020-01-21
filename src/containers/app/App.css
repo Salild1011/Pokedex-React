@@ -7,8 +7,9 @@
 }
 
 .dex-container {
-  max-width: 600px;
-  max-height: 400px;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 80%;
   background-color: #ff3f34;
-  overflow-y: scroll;
 }
