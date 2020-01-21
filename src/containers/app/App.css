@@ -1,0 +1,14 @@
+.App {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #485460;
+}
+
+.dex-container {
+  max-width: 600px;
+  max-height: 400px;
+  background-color: #ff3f34;
+  overflow-y: scroll;
+}
