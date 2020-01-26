@@ -6,7 +6,9 @@ const DetailPage = (props) => {
 
   return (
     <div className="DetailPage">
-        {props.id}
+      <div className="poke-img-container">
+        <img className="poke-img" src={"https://pokeres.bastionbot.org/images/pokemon/" + props.id + ".png"} />
+      </div>
     </div>
   );
 }
