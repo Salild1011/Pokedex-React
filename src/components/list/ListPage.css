@@ -17,24 +17,29 @@ ul.dex-list {
   padding: 10px 0 50% !important;
 }
 
-.list-item {
+.selected-list-item, .list-item {
   display: flex;
   padding: 8px 0;
   margin: 0 20px;
   border-bottom: 1px solid rgb(224, 224, 224);
+  border-radius: 2px;
   cursor: pointer;
+}
+
+.selected-list-item {
+  background-color: #0be881;
 }
 
 .list-item:hover {
   background-color: rgb(224, 224, 224);
 }
 
-.list-item > .item-num {
+.item-num {
   width: 10%;
   text-align: end;
   margin-right: 20px;
 }
 
-.list-item > .item-name {
+.item-name {
   width: 40%;
 }

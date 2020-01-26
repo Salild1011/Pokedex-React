@@ -6,7 +6,7 @@ const DetailPage = (props) => {
 
   return (
     <div className="DetailPage">
-        Details
+        {props.id}
     </div>
   );
 }

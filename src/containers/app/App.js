@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 const App = () => {
-  const [ selected, setSelected ] = useState(null);
+  const [ selected, setSelected ] = useState(0);
   const [ pokelist, setPokelist ] = useState([]);
 
   const fetchAllPokemon = () => {
@@ -26,11 +26,13 @@ const App = () => {
     fetchAllPokemon();
   }, [ pokelist.length ]);
 
+  console.log("SELECTED: " + selected);
+
   return (
     <div className="App">
       <div className="dex-container">
-        <DetailPage />
-        <ListPage list={pokelist} />
+        <DetailPage id={selected} />
+        <ListPage list={pokelist} select={setSelected} selectedIndex={selected} />
       </div>
     </div>
   );
