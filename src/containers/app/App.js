@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 const App = () => {
-  const [ selected, setSelected ] = useState(0);
+  const [ selected, setSelected ] = useState(1);
   const [ pokelist, setPokelist ] = useState([]);
 
   const fetchAllPokemon = () => {
@@ -25,8 +25,6 @@ const App = () => {
   useEffect(() => {
     fetchAllPokemon();
   }, [ pokelist.length ]);
-
-  console.log("SELECTED: " + selected);
 
   return (
     <div className="App">
