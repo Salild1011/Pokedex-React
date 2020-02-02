@@ -13,26 +13,21 @@ const DetailPage = (props) => {
   // State
   const [ details, setDetails ] = useState({ data: null });
 
-  const fetchPokemonDetails = () => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/' + props.id)
-    .then(response => {
-      let data = response.data;
-      setDetails({ data: data });
-    })
-    .catch(error => {
-      console.log(error);
-    });
-  }
-
   // Make network call
   useEffect(() => {
+    const fetchPokemonDetails = async () => {
+      const response = await axios('https://pokeapi.co/api/v2/pokemon/' + props.id);
+
+      setDetails({ data: response.data });
+    }
+
     fetchPokemonDetails();
   }, []);
 
   // Load the details
   let container = (<div />);
   if (details['data'] != null) {
-    container = (<TypeRow types={details['data']} />);
+    container = (<TypeRow stats={details['data']} />);
   }
 
   return (

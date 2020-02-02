@@ -3,12 +3,8 @@ import './TypeRow.css';
 
 
 const TypeRow = (props) => {
-
-  if (props.types && props.types['data'] == null) {
-    return (<div></div>);
-  }
   
-  let t = props.types.map(obj => {
+  let types = props.stats.types.map(obj => {
     return (<li>
       {obj["type"]["name"]}
     </li>);
@@ -17,7 +13,9 @@ const TypeRow = (props) => {
   return (
     <div className="TypeRow">
       <h3>Types</h3>
-      {t}
+      <ul>
+        {types}
+      </ul>
     </div>
   );
 }
