@@ -5,7 +5,8 @@ import './TypeRow.css';
 const TypeRow = (props) => {
   
   let types = props.stats.types.map(obj => {
-    return (<span className="type-row-item">
+    let typeClass = "type-" + obj["type"]["name"];
+    return (<span className={"type-row-item " + typeClass}>
       { obj["type"]["name"].toUpperCase() }
     </span>);
   });
