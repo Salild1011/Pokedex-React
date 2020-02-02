@@ -9,6 +9,7 @@ const DetailPage = (props) => {
   // Constants
   const IMG_BASE_URL = 'https://pokeres.bastionbot.org/images/pokemon/';
   const IMG_EXT = '.png';
+  const PKMN_ID = props.id;
 
   // State
   const [ details, setDetails ] = useState({ data: null });
@@ -16,13 +17,13 @@ const DetailPage = (props) => {
   // Make network call
   useEffect(() => {
     const fetchPokemonDetails = async () => {
-      const response = await axios('https://pokeapi.co/api/v2/pokemon/' + props.id);
+      const response = await axios('https://pokeapi.co/api/v2/pokemon/' + PKMN_ID);
 
       setDetails({ data: response.data });
     }
 
     fetchPokemonDetails();
-  }, []);
+  }, [ PKMN_ID ]);
 
   // Load the details
   let container = (<div />);
@@ -33,7 +34,7 @@ const DetailPage = (props) => {
   return (
     <div className="DetailPage">
       <div className="poke-img-container">
-        <img className="poke-img" src={IMG_BASE_URL + props.id + IMG_EXT} alt="pokemon" />
+        <img className="poke-img" src={IMG_BASE_URL + PKMN_ID + IMG_EXT} alt="pokemon" />
       </div>
 
       <div className="stats-container">
