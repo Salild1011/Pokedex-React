@@ -1,3 +1,21 @@
 .TypeRow {
   display: block;
 }
+
+.type-title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.type-row-container {
+  padding: 4px 0;
+}
+
+.type-row-item {
+  background-color: aquamarine;
+  font-size: 12px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  margin-right: 10px;
+}

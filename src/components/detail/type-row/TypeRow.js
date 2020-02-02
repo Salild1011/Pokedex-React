@@ -5,17 +5,17 @@ import './TypeRow.css';
 const TypeRow = (props) => {
   
   let types = props.stats.types.map(obj => {
-    return (<li>
-      {obj["type"]["name"]}
-    </li>);
+    return (<span className="type-row-item">
+      { obj["type"]["name"].toUpperCase() }
+    </span>);
   });
 
   return (
     <div className="TypeRow">
-      <h3>Types</h3>
-      <ul>
+      <span className="type-title">Types</span>
+      <div className="type-row-container">
         {types}
-      </ul>
+      </div>
     </div>
   );
 }
